@@ -19,7 +19,7 @@ function getInstallerConfig() {
         authors: 'Paul Frank Pacheco Carpio',
         noMsi: true,
         outputDirectory: path.join(outPath, 'windows-installer'),
-        exe: 'electron-tutorial-app.exe',
+        exe: 'Yupay - Administración de Ventas.exe',
         setupExe: 'Yupay.exe',
         setupIcon: path.join(__dirname,'assets/icon.ico')
     })

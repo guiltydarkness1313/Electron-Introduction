@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package-win":"electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\""
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\""
   },
   "author": "Paul Frank Pacheco Carpio",
   "license": "ISC",
@@ -16,7 +16,9 @@
     "electron-winstaller": "^2.6.4",
     "jquery": "^3.3.1",
     "node-notifier": "^5.2.1",
+    "npm": "^6.3.0",
     "popper.js": "^1.14.3",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "vue": "^2.5.17"
   }
 }
