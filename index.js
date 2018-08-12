@@ -8,14 +8,14 @@ let win;
 function createWindow(){
   win = new BrowserWindow(
       {
-          titleBarStyle:"hidden",
+          titleBarStyle:"default",
           width:1280,
           height:720,
           minHeight:600,
           minWidth:900,
           backgroundColor:'#FA0E0E',
           show:true,
-          icon:path.join(__dirname,'public/images/png/256x256.png')
+          icon:path.join(__dirname,'assets/icons/mac/icon.icns')
       }
       );
 

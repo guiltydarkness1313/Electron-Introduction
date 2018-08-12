@@ -21,6 +21,6 @@ function getInstallerConfig() {
         outputDirectory: path.join(outPath, 'windows-installer'),
         exe: 'Yupay - Administración de Ventas.exe',
         setupExe: 'Yupay.exe',
-        setupIcon: path.join(__dirname,'assets/icon.ico')
+        setupIcon: path.join(__dirname,'assets/app.ico')
     })
 }

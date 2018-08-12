@@ -91,7 +91,7 @@
       <div class="col-3 col-lg-3 my-2">
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">My products</a>
-          <a href="#" class="list-group-item list-group-item-action">New products</a>
+          <a href="new-product.html" class="list-group-item list-group-item-action">New products</a>
           <a href="#" class="list-group-item list-group-item-action">Another item yet</a>
           <a href="#" class="list-group-item list-group-item-action disabled">Last item</a>
         </div>
@@ -103,78 +103,15 @@
         and Electron <script>document.write(process.versions.electron)</script>.-->
         <button id="btnA" class="btn btn-success">Apachurra</button>
         <button id="btnNext" class="btn btn-info">Go to Next Site</button>
-        <script>
-          $('#btnNext').on('click',()=>{
-             const {remote} = require('electron');
-             remote.getCurrentWindow().loadURL(__dirname+'/new-product.html')
-          });
-        </script>
         <h3 id="textEx"></h3>
         <div class="container-fluid">
         <div class="card-group py-4" id="content">
-        <script>
-            let $ = require('jquery');
-            let path = require('path');
-            let notifier = require('node-notifier');
 
-
-            let count = 0;
-            $('#textEx').text(count.toString());
-            $('#btnA').on('click',()=>{
-                count++;
-                $('#textEx').text(count);
-                notifier.notify({
-                        title: 'Basic Notification',
-                        body: 'Short message part',
-                        icon: path.join("/public/images/png/256x256.png"),
-                        sound: true,
-                        wait: true,
-                    },
-                    function (err,res) {
-
-                    }
-                );
-                notifier.on('click',function (notifierObject,opt) {
-                    console.log("Clicked notification")
-                });
-                notifier.on('timeout',function (notifierObject,opt) {
-                    console.log("Timed out!")
-                });
-            })
-        </script>
-        <script>
-          const request = require('request');
-
-          request("http://yupay.pe/v1/list",function (error,response,body) {
-              if (!error){
-                  console.log(body);
-                  var element = document.getElementById('content');
-                  //use parse to convert the data from REST API to JSON OBJECT
-                  var data  = JSON.parse(body);
-                  for(let i=0;i<data.length;i++) {
-                      element.innerHTML += '<div class="col-md">'+
-                          '<div class="card bg-light">\n' +
-                          '  <div class="card-header">\n' +
-                          data[i].name +
-                          '  </div>\n' +
-                          `<img class="card-img" src=${data[i].image} alt=${data[i].name}>`+
-                          '  <div class="card-body">\n' +
-                          '    <h5 class="card-title">S/.'+data[i].price+'</h5>\n' +
-                          '    <p class="card-text">'+data[i].created_at+'</p>\n' +
-                          '    <a href="#" class="btn btn-primary">Comprar</a>\n' +
-                          '  </div>\n' +
-                          '</div>'+'</div>'
-                  }
-              }
-
-          });
-
-        </script>
         </div>
         </div>
       </div>
     </div>
   </div>
-
+<script src="../public/js/utils.js"></script>
 </body>
 </html>
